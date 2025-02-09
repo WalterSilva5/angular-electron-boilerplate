@@ -5,15 +5,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Component1Component } from './components/component1/component1.component';
-import { Component2Component } from './components/component2/component2.component';
 import { NavlistComponent } from './components/navlist/navlist.component';
+import { AboutComponent } from './pages/about/about.component';
+import { SystemInfoComponent } from './pages/system-info/system-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Component1Component,
-    Component2Component,
+    AboutComponent,
+    SystemInfoComponent,
     NavlistComponent
   ],
   imports: [

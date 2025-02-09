@@ -2,11 +2,11 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import { IpcService } from 'src/app/ipc.service';
 
 @Component({
-  selector: 'app-component1',
-  templateUrl: './component1.component.html',
-  styleUrls: ['./component1.component.css']
+  selector: 'app-system-info',
+  templateUrl: './system-info.component.html',
+  styleUrls: ['./system-info.component.css']
 })
-export class Component1Component implements OnInit {
+export class SystemInfoComponent implements OnInit {
   arch = '-';
   hostname = '-';
   platform = '-';

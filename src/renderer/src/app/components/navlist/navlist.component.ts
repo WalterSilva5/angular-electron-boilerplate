@@ -3,7 +3,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-navlist',
   templateUrl: './navlist.component.html',
-  styleUrls: ['./navlist.component.css']
+  styleUrls: ['./navlist.component.css'],
 })
 export class NavlistComponent implements OnInit {
 
