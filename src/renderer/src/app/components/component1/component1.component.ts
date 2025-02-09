@@ -25,4 +25,8 @@ export class Component1Component implements OnInit {
         });
       });
   }
+
+  showNotification() {
+    this.ipcService.showNotification('Hello from Angular');
+  }
 }

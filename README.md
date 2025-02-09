@@ -42,9 +42,9 @@ This builds a project and places the output in the */dist* folder.
 | --- | --- |
 | `npm run build:dev:all` | Developer builds of all projects |
 | `npm run build:prod:all` | Production builds of all projects |
-| `npm run build:dev:main` | Developer build of the *Electron main* project |
+| `npm run build:dev:main` | Developer build of the *Electron main* project //BACKEND |
 | `npm run build:prod:main` | Production build of the *Electron main* project |
-| `npm run build:dev:renderer` | Developer build of the *Electron renderer* project |
+| `npm run build:dev:renderer` | Developer build of the *Electron renderer* project //FRONTEND |
 | `npm run build:prod:renderer` | Production build of the *Electron renderer* project |
 | `npm run build:dev:preload` | Developer build of the *Electron preload* project |
 | `npm run build:prod:preload` | Production build of the *Electron preload* project |

@@ -23,4 +23,8 @@ export class IpcService {
       window.api.electronIpcSend('request-systeminfo');
     });
   }
+
+  showNotification(message: string) {
+    window.api.electronIpcSend('show-notification', message);
+  }
 }

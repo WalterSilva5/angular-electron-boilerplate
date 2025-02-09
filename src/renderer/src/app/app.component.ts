@@ -15,4 +15,8 @@ export class AppComponent {
   clickDevTools() {
     this.ipcService.openDevTools();
   }
+
+  showNotification() {
+    this.ipcService.showNotification('Hello, world!');
+  }
 }

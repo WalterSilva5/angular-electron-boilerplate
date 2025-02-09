@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain, Menu } from 'electron';
 import * as path from 'path';
-import { DtoSystemInfo } from '../ipc-dtos/dtosysteminfo';
-import * as os from 'os';
+import { SystemService } from '../../backend/module/system/system.service';
+import { NotificationService } from '../../backend/module/notification/notification.service';
 
 let win: BrowserWindow | null = null;
 
@@ -28,6 +28,10 @@ function createWindow() {
     }
   });
 
+  // Abre o DevTools automaticamente
+  // desabilitar em produção
+  win.webContents.openDevTools();
+
   // https://stackoverflow.com/a/58548866/600559
   Menu.setApplicationMenu(null);
 
@@ -45,13 +49,20 @@ ipcMain.on('dev-tools', () => {
 });
 
 ipcMain.on('request-systeminfo', () => {
-  const systemInfo = new DtoSystemInfo();
-  systemInfo.Arch = os.arch();
-  systemInfo.Hostname = os.hostname();
-  systemInfo.Platform = os.platform();
-  systemInfo.Release = os.release();
-  const serializedString = systemInfo.serialize();
+  const systemService = new SystemService(win);
+  console.log('request-systeminfo');
+  systemService.requestSystemInfo();
+
+  // if (win) {
+  //   win.webContents.send('systeminfo', serializedString);
+  // }
+});
+
+ipcMain.on('show-notification', (event, arg) => {
   if (win) {
-    win.webContents.send('systeminfo', serializedString);
+    console.log('show-notification', arg);
+    const notificationService = new NotificationService();
+    const message = "Mensagem a ser exibida";
+    notificationService.show(message);
   }
 });

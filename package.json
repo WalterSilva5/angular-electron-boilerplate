@@ -46,6 +46,7 @@
     "@types/jasmine": "5.1.4",
     "@types/jasminewd2": "~2.0.13",
     "@types/node": "22.5.0",
+    "@types/node-notifier": "^8.0.5",
     "@types/webpack": "5.28.5",
     "codelyzer": "6.0.2",
     "electron": "33.0.0",
@@ -68,5 +69,8 @@
     "webpack": "5.94.0",
     "webpack-cli": "5.1.4",
     "zone.js": "0.14.10"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
   }
 }
